@@ -1,4 +1,4 @@
-#include "../include/CLI11/CLI11.hpp"
+#include "include/CLI11/CLI11.hpp"
 #include <filesystem>
 #include <iostream>
 #include <string>
