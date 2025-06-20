@@ -6,7 +6,6 @@ import multiprocessing
 QUEUE = multiprocessing.JoinableQueue()
 NUM_WORKERS = 4
 CLIENT_COUNTER = multiprocessing.Value("i", 0)
-HOST = "192.168.0.11"
 PORT = 9000
 
 
