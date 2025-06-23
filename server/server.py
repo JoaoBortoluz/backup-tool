@@ -6,6 +6,7 @@ import multiprocessing
 QUEUE = multiprocessing.JoinableQueue()
 NUM_WORKERS = 4
 CLIENT_COUNTER = multiprocessing.Value("i", 0)
+HOST = "0.0.0.0"
 PORT = 9000
 
 
@@ -55,7 +56,7 @@ def start_server():
         multiprocessing.Process(target=worker, args=(QUEUE,), daemon=True).start()
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
-        server.bind(("0.0.0.0", PORT))
+        server.bind((HOST, PORT))
         server.listen()
         print(
             f"[~] Server listening on port {PORT} with {
