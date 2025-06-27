@@ -7,7 +7,7 @@ import argparse
 import pathlib
 
 # atitus: 10.1.25.70
-HOST = "192.168.0.11"
+HOST = "10.1.25.70"
 PORT = 9000
 
 
